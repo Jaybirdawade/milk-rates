@@ -11,13 +11,27 @@
     "dairy": "Amul",
     "cow": null,
     "buffalo": 865,
-    "date": "2025-07-08"
+    "date": "2025-07-09"
+  },
+  {
+    "state": "Punjab",
+    "dairy": "Verka",
+    "cow": 35.00,
+    "buffalo": 60.00,
+    "date": "2025-07-09"
+  },
+  {
+    "state": "Karnataka",
+    "dairy": "Nandini (KMF)",
+    "cow": 37.00,
+    "buffalo": 62.00,
+    "date": "2025-07-09"
   },
   {
     "state": "Odisha",
     "dairy": "OMFED",
-    "cow": 38,
+    "cow": 38.00,
     "buffalo": null,
-    "date": "2025-07-01"
+    "date": "2025-07-09"
   }
 ]
