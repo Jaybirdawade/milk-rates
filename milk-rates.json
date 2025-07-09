@@ -1,0 +1,23 @@
+[
+  {
+    "state": "Maharashtra",
+    "dairy": "Gokul Dairy",
+    "cow": 36.84,
+    "buffalo": 60.48,
+    "date": "2025-07-09"
+  },
+  {
+    "state": "Gujarat",
+    "dairy": "Amul",
+    "cow": null,
+    "buffalo": 865,
+    "date": "2025-07-08"
+  },
+  {
+    "state": "Odisha",
+    "dairy": "OMFED",
+    "cow": 38,
+    "buffalo": null,
+    "date": "2025-07-01"
+  }
+]
