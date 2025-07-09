@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Milk Rates</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body { font-family: Arial; background: #f0faff; padding: 20px; color: #333; }
+    h1 { text-align: center; color: #004080; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+    th, td { padding: 12px; border: 1px solid #ccc; text-align: center; }
+    th { background: #d6ecff; }
+    .error { color: red; text-align: center; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🐄 Milk Procurement Rates</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>State</th>
+        <th>Dairy</th>
+        <th>Cow Milk (₹/L)</th>
+        <th>Buffalo Milk (₹/L)</th>
+        <th>Last Updated</th>
+      </tr>
+    </thead>
+    <tbody id="milkRates">
+      <tr><td colspan="5">Loading data...</td></tr>
+    </tbody>
+  </table>
+
+  <div class="error" id="errorMsg"></div>
+
+  <script>
+    fetch("https://yourusername.github.io/yourrepo/milk-rates.json") // Replace with your actual link
+      .then(response => response.json())
+      .then(data => {
+        const table = document.getElementById("milkRates");
+        table.innerHTML = "";
+        data.forEach(entry => {
+          table.innerHTML += `
+            <tr>
+              <td>${entry.state}</td>
+              <td>${entry.dairy}</td>
+              <td>${entry.cow ? "₹" + entry.cow : "—"}</td>
+              <td>${entry.buffalo ? "₹" + entry.buffalo : "—"}</td>
+              <td>${entry.date}</td>
+            </tr>
+          `;
+        });
+      })
+      .catch(err => {
+        document.getElementById("milkRates").innerHTML = "";
+        document.getElementById("errorMsg").innerText = "❌ Could not load milk rate data.";
+      });
+  </script>
+</body>
+</html>
